@@ -13,6 +13,9 @@
         * show mac address-table address {address} vlan {vlan}
         * show mac address-table address {address} interface {interface}
         * show mac address-table address {address} interface {interface} vlan {vlan}
+        * show mac address-table dynamic
+        * show mac address-table dynamic vlan {vlan}
+        * show mac address-table dynamic interface {interface}
 
 """
 # Python
@@ -171,6 +174,10 @@ class ShowMacAddressTable(ShowMacAddressTableBase, ShowMacAddressTableBaseSchema
         'show mac address-table address {address} vlan {vlan}',
         'show mac address-table address {address} interface {interface}',
         'show mac address-table address {address} interface {interface} vlan {vlan}'
+        'show mac address-table dynamic',
+        'show mac address-table dynamic vlan {vlan}',
+        'show mac address-table dynamic interface {interface}',
+
     ]
 
     def cli(self, address=None, interface=None, vlan=None, output=None):
