@@ -1791,7 +1791,7 @@ class ShowBgpVrfAllAll(ShowBgpVrfAllAllSchema):
                                 '( *(?P<origin_codes>(i|e|\?|\&|\|)+))'
                                 '(?P<prefix>[a-zA-Z0-9\.\:\/\[\]\,]+)'
                                 ' +(?P<next_hop>[a-zA-Z0-9\.\:]+)'
-                                ' +(?P<numbers>[a-zA-Z0-9\s\(\)\{\}\?]+)$')
+                                ' +(?P<numbers>[a-zA-Z0-9\.\:\s\(\)\{\}\?]+)$')
 
         for line in out.splitlines():
             line = line.rstrip()
